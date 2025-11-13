@@ -1,0 +1,106 @@
+/* Load Tailwind first */
+@import "tailwindcss";
+
+/* Custom font */
+@font-face {
+  font-family: 'NeueHaasGrotDisp';
+  src: url('/fonts/NeueHaasGrotDisp-55Roman.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Custom font variables */
+  --font-sans: 'NeueHaasGrotDisp', Arial, Helvetica, sans-serif;
+  --font-mono: monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-weight: 400;
+}
+
+/* Normalize headings so they don’t fake bold */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+@media (min-width: 1240px) {
+  .bp-1240\:flex-col {
+    flex-direction: column !important;
+  }
+  .bp-1240\:items-center {
+    align-items: center !important;
+  }
+  .bp-1240\:justify-center {
+    justify-content: center !important;
+  }
+  .bp-1240\:mt-8 {
+    margin-top: 2rem !important;
+  }
+  .bp-1240\:ml-0 {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 1039px) {
+  .bp-max1040\:flex-col {
+    flex-direction: column !important;
+  }
+  .bp-max1040\:items-center {
+    align-items: center !important;
+  }
+  .bp-max1040\:justify-center {
+    justify-content: center !important;
+  }
+  .bp-max1040\:mt-8 {
+    margin-top: 2rem !important;
+  }
+  .bp-max1040\:ml-0 {
+    margin-left: 0 !important;
+  }
+}
+
+@media (min-width: 1040px) {
+  .bp-min1041\:justify-center {
+    justify-content: center !important;
+  }
+}
+
+@media (min-width: 1380px) {
+  .bp-min1380\:max-w-\[647px\] {
+    max-width: 647px !important;
+  }
+}
+
+@media (min-width: 1170px) {
+  .bp-min1170\:relative {
+    position: relative !important;
+  }
+  .bp-min1170\:absolute {
+    position: absolute !important;
+  }
+  .bp-min1170\:inset-0 {
+    inset: 0 !important;
+  }
+  .bp-min1170\:size-full {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .bp-min1170\:bg-transparent {
+    background-color: transparent !important;
+  }
+}
