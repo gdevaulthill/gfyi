@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { motion, useAnimation, useScroll, useTransform } from 'framer-motion'
 
 function Parallax({
@@ -127,17 +128,35 @@ export default function Page() {
             <a href="#top" className="font-medium hover:opacity-80">GRAHAM D. HILL</a>
           </nav>
           <div className="flex items-center gap-6 md:gap-8 text-xl">
-            <a aria-label="TikTok" href="#" className="hover:opacity-80">
-              <img src="/Tiktok.svg" alt="TikTok" className="h-4 md:h-4 w-auto" />
+            <a
+              aria-label="TikTok"
+              href="https://www.tiktok.com/@graham.fyi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+            >
+              <Image src="/Tiktok.svg" alt="TikTok" width={64} height={64} className="h-4 md:h-4 w-auto" />
             </a>
-            <a aria-label="Instagram" href="#" className="hover:opacity-80">
-              <img src="/IG.svg" alt="Instagram" className="h-4 md:h-4 w-auto" />
+            <a
+              aria-label="Instagram"
+              href="https://www.instagram.com/graham.fyi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+            >
+              <Image src="/IG.svg" alt="Instagram" width={64} height={64} className="h-4 md:h-4 w-auto" />
             </a>
-            <a aria-label="LinkedIn" href="#" className="hover:opacity-80">
-              <img src="/LinkedIn.svg" alt="LinkedIn" className="h-4 md:h-4 w-auto" />
+            <a
+              aria-label="LinkedIn"
+              href="https://www.linkedin.com/in/gdevaulthill/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+            >
+              <Image src="/LinkedIn.svg" alt="LinkedIn" width={64} height={64} className="h-4 md:h-4 w-auto" />
             </a>
-            <a aria-label="Email" href="mailto:hello@example.com" className="hover:opacity-80">
-              <img src="/Mail.svg" alt="Email" className="h-4 md:h-4 w-auto" />
+            <a aria-label="Email" href="mailto:graham@graham.fyi" className="hover:opacity-80">
+              <Image src="/Mail.svg" alt="Email" width={64} height={64} className="h-4 md:h-4 w-auto" />
             </a>
           </div>
         </motion.div>
@@ -184,10 +203,13 @@ export default function Page() {
                   initial="hidden"
                   animate={videoControls}
                 >
-                  <img
+                  <Image
                     src="/header.png"
                     alt="Project preview placeholder"
+                    width={1920}
+                    height={1080}
                     className="block w-full h-auto aspect-[16/9] object-cover"
+                    priority
                   />
                 </motion.div>
 
@@ -228,10 +250,13 @@ export default function Page() {
       {/* Experience banner with overlaid title */}
       <section id="experience" className="mt-12 md:mt-0 w-full md:h-[879px]">
         <div className="md:relative md:h-full">
-          <img
+          <Image
             src="/experience2.png"
             alt="Experience section background placeholder"
+            width={1920}
+            height={1080}
             className="block w-full h-auto object-cover md:absolute md:inset-0 md:h-full md:w-full"
+            priority
           />
           <div className="px-[17px] md:px-20 lg:px-20 py-0 md:py-0 bg-black md:bg-transparent md:relative md:h-full">
             <div className="flex flex-col md:flex-row md:items-start gap-10 md:gap-12 md:h-full pt-16 md:pt-[210px] md:pb-24">
@@ -258,9 +283,11 @@ export default function Page() {
       {/* Translate section */}
       <section className="mt-12 md:mt-0 w-full">
         <div className="bp-min1170:relative">
-          <img
+          <Image
             src="/translate.png"
             alt="Translate background"
+            width={1920}
+            height={1080}
             className="block w-full h-auto object-cover bp-min1170:absolute bp-min1170:inset-0 bp-min1170:size-full"
           />
           <div className="px-[17px] md:px-20 py-16 md:py-32 bg-black bp-min1170:bg-transparent bp-min1170:relative">
