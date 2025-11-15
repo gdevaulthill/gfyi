@@ -157,7 +157,7 @@ export default function MockPage() {
           viewport={{ once: true, amount: 0.4 }}
         >
           <motion.div
-            className="w-full md:flex-1 flex justify-center md:justify-center md:pr-10 lg:pr-16 md:transform md:-translate-y-10 bp-max1040:justify-center bp-min1041:justify-center pt-[30px]"
+            className="w-full md:flex-1 flex justify-center md:justify-center md:pr-10 lg:pr-16 md:transform md:-translate-y-[44px] bp-max1040:justify-center bp-min1041:justify-center pt-[30px]"
             variants={lineVariant}
             initial="hidden"
             whileInView="show"
@@ -280,7 +280,7 @@ export default function MockPage() {
             </motion.h3>
             <motion.a
               href="mailto:hello@example.com"
-              className="mt-6 inline-block text-[32px] md:text-5xl leading-[1.2] tracking-[0.32px] text-red-500 hover:opacity-80"
+              className="mt-6 inline-block text-[28px] md:text-5xl leading-[1.2] tracking-[0.32px] text-red-500 hover:opacity-80"
               variants={lineVariant}
             >
               Let’s Chat.
@@ -290,7 +290,7 @@ export default function MockPage() {
       </section>
 
       {/* Footer */}
-      <footer id="about" className="px-[34px] md:px-20 py-5 md:py-36 text-left text-[12px] text-neutral-400 uppercase tracking-[0.05em]">
+      <footer id="about" className="px-[34px] md:px-20 py-5 md:py-36 text-left text-[8px] md:text-[12px] text-neutral-400 uppercase tracking-[0.15em]">
         <motion.div variants={sectionFade} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
           © {new Date().getFullYear()} GRAHAM HILL. ALL RIGHTS RESERVED.
         </motion.div>
