@@ -193,7 +193,7 @@ export default function MockPage() {
         />
           <div className="px-[34px] md:px-20 lg:px-20 py-0 md:py-0 bg-black md:bg-transparent md:relative md:h-full">
             <motion.h2
-              className="text-[28px] md:text-[48px] leading-tight max-w-[360px] md:max-w-[420px] mt-16 md:mt-0 md:absolute md:left-0 md:top-[210px] md:pl-[34px] text-left"
+              className="text-[28px] md:text-[48px] leading-tight max-w-[360px] md:max-w-[420px] mt-16 md:mt-0 md:absolute md:left-0 md:top-[210px] md:pl-[80px] text-left"
               variants={lineVariant}
             >
               <span className="text-red-500 block sm:w-[320px] md:w-[320px]">My Experience,</span>
