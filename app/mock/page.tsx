@@ -157,7 +157,7 @@ export default function MockPage() {
           viewport={{ once: true, amount: 0.4 }}
         >
           <motion.div
-            className="w-full md:flex-1 flex justify-center md:justify-center md:px-10 lg:px-16 md:transform md:-translate-y-10 bp-max1040:justify-center bp-min1041:justify-center pt-[30px]"
+            className="w-full md:flex-1 flex justify-center md:justify-center md:pr-10 lg:pr-16 md:transform md:-translate-y-10 bp-max1040:justify-center bp-min1041:justify-center pt-[30px]"
             variants={lineVariant}
             initial="hidden"
             whileInView="show"
@@ -165,7 +165,7 @@ export default function MockPage() {
           >
             <video
               src="/logo_sequence_06.mp4"
-              className="h-[354px] w-[270px] md:h-[320px] md:w-[220px] rounded-[24px] md:rounded-[40px] object-contain bg-black"
+              className="h-[354px] w-[270px] md:h-[480px] md:w-[330px] rounded-[24px] md:rounded-[40px] object-contain bg-black"
               autoPlay
               muted
               loop
