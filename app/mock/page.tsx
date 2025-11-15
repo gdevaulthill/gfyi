@@ -80,7 +80,7 @@ export default function MockPage() {
       {/* NAV */}
       <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/40">
         <motion.div
-          className="w-full px-[17px] md:px-20 py-4 md:py-6 flex items-center justify-between"
+          className="w-full px-[34px] md:px-20 py-4 md:py-6 flex items-center justify-between"
           variants={headerEnter}
           initial="hidden"
           animate="show"
@@ -107,10 +107,10 @@ export default function MockPage() {
 
       {/* HERO */}
       <section id="top" className="relative overflow-hidden">
-        <div className="pt-[170px] pb-12 md:pt-[170px] md:pb-0">
+        <div className="pt-[80px] md:pt-[170px] pb-0 md:pb-0">
           <div className="relative">
             {/* Headline */}
-            <div className="px-[17px] md:px-20">
+            <div className="px-[34px] md:px-20">
               <motion.h1
                 className="leading-[1.1] font-normal tracking-tight text-white"
                 variants={heroTitleVariants}
@@ -119,58 +119,53 @@ export default function MockPage() {
               >
                 <motion.span className="block text-left text-[44px] md:text-[72px]" variants={lineVariant}>
                   <span className="text-red-500">Graham Hill</span>
-                  <span> is a</span>
+                
                 </motion.span>
                 <motion.span className="block text-left text-[44px] md:text-[72px]" variants={lineVariant}>
-                  Design & Creative
-                </motion.span>
-                <motion.span className="block text-left text-[44px] md:text-[72px]" variants={lineVariant}>
-                  Director
+                is a Creative Director.
                 </motion.span>
               </motion.h1>
             </div>
 
-            {/* Media card */}
+            {/* Media */}
             <motion.div
-              className="px-[17px] md:px-20 mt-10 md:mt-10 relative z-0"
+              className="mt-10 md:mt-10 relative z-0"
               variants={lineVariant}
               initial="hidden"
               animate="show"
             >
-              <div className="w-full rounded-[30px] md:rounded-[40px] bg-white/5 ring-1 ring-white/10 overflow-hidden shadow-2xl z-0">
-                <Image
-                  src="/header.png"
-                  alt="Header visual"
-                  width={1920}
-                  height={1080}
-                  className="block w-full h-auto aspect-[16/9] object-cover"
-                  priority
-                />
-              </div>
+              <Image
+                src="/header.png"
+                alt="Header visual"
+                width={1920}
+                height={1080}
+                className="block w-full h-[320px] md:h-auto object-cover"
+                priority
+              />
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Intro paragraph with IG mark */}
-      <section className="px-[17px] md:px-20 mt-8 md:mt-0 md:h-[550px]">
+      <section className="px-[34px] md:px-20 mt-0 md:mt-0 pb-[20px] lg:pb-0 lg:py-20">
         <motion.div
-          className="flex flex-col md:flex-row items-center md:items-center md:justify-between gap-8 md:gap-0 h-full bp-max1040:flex-col bp-max1040:items-center"
+          className="flex flex-col md:flex-row items-start md:items-center md:justify-between gap-8 md:gap-0 h-full bp-max1040:flex-col bp-max1040:items-start"
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.4 }}
         >
           <motion.div
-            className="w-full md:flex-1 flex justify-center md:justify-center md:px-10 lg:px-16 bp-max1040:justify-center bp-min1041:justify-center"
+            className="w-full md:flex-1 flex justify-center md:justify-center md:px-10 lg:px-16 md:transform md:-translate-y-10 bp-max1040:justify-center bp-min1041:justify-center pt-[30px]"
             variants={lineVariant}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.4 }}
           >
             <video
-              src="/logo_sequence_03.mp4"
-              className="h-[236px] w-[180px] md:h-[320px] md:w-[220px] rounded-[24px] md:rounded-[40px] object-contain bg-black"
+              src="/logo_sequence_06.mp4"
+              className="h-[354px] w-[270px] md:h-[320px] md:w-[220px] rounded-[24px] md:rounded-[40px] object-contain bg-black"
               autoPlay
               muted
               loop
@@ -179,7 +174,7 @@ export default function MockPage() {
             />
           </motion.div>
           <AnimatedBlock
-            className="mt-8 md:mt-0 w-full max-w-[328px] md:max-w-none md:w-[642px] md:flex-none md:basis-[642px] text-left"
+            className="mt-0 md:mt-0 md:transform md:-translate-y-10 w-full max-w-[328px] md:max-w-[642px] md:w-full text-left"
             lines={['A hands-on creative leader with over 20 years experience working at the intersection of product and brand.']}
           />
         </motion.div>
@@ -196,33 +191,31 @@ export default function MockPage() {
           className="block w-full h-auto object-cover md:absolute md:inset-0 md:h-full md:w-full"
           priority
         />
-          <div className="px-[17px] md:px-20 lg:px-20 py-0 md:py-0 bg-black md:bg-transparent md:relative md:h-full">
+          <div className="px-[34px] md:px-20 lg:px-20 py-0 md:py-0 bg-black md:bg-transparent md:relative md:h-full">
+            <motion.h2
+              className="text-[28px] md:text-[48px] leading-tight max-w-[360px] md:max-w-[420px] mt-16 md:mt-0 md:absolute md:left-0 md:top-[210px] md:pl-[34px] text-left"
+              variants={lineVariant}
+            >
+              <span className="text-red-500 block sm:w-[320px] md:w-[320px]">My Experience,</span>
+              <span className="text-white block sm:w-[320px] md:w-[320px]">In Short.</span>
+            </motion.h2>
             <motion.div
-              className="flex flex-col md:flex-row md:items-start gap-10 md:gap-12 md:h-full pt-16 md:pt-[210px] md:pb-24"
+              className="w-full mt-[10px] md:mt-0 flex flex-col gap-4 text-[8px] leading-[1.4] tracking-[0.15em] uppercase text-neutral-100 md:text-[12px] md:leading-[1.6] md:w-[642px] md:max-w-[642px] md:ml-auto pt-16 md:pt-[210px] md:pb-24 md:pl-[360px]"
               variants={sectionFade}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.3 }}
             >
-              <motion.h2 className="text-[28px] md:text-[48px] leading-tight max-w-[360px] md:max-w-[420px]" variants={lineVariant}>
-                <span className="text-red-500 block">My Experience,</span>
-                <span className="text-white block">In Short.</span>
-              </motion.h2>
-              <motion.div
-                className="w-full mt-8 md:mt-0 flex flex-col gap-4 text-[8px] leading-[1.4] tracking-[0.15em] uppercase text-neutral-100 md:text-[12px] md:leading/[1.6] md:w/[642px] md:basis/[642px]"
-                variants={sectionFade}
-              >
-                {experienceEntries.map(({ year, detail }) => (
-                  <motion.div
-                    key={year}
-                    className="grid grid-cols-[25px_minmax(0,1fr)] md:grid-cols-[68px_minmax(0,1fr)] gap-x-[20px] md:gap-x-[36px] items-start"
-                    variants={lineVariant}
-                  >
-                    <span className="text-right">{year}</span>
-                    <span className="whitespace-pre-line text-left">{detail}</span>
-                  </motion.div>
-                ))}
-              </motion.div>
+              {experienceEntries.map(({ year, detail }) => (
+                <motion.div
+                  key={year}
+                  className="grid grid-cols-[25px_minmax(0,1fr)] md:grid-cols-[45px_minmax(0,1fr)] gap-x-[20px] md:gap-x-[36px] items-start"
+                  variants={lineVariant}
+                >
+                  <span className="text-right">{year}</span>
+                  <span className="whitespace-pre-line text-left">{detail}</span>
+                </motion.div>
+              ))}
             </motion.div>
           </div>
         </div>
@@ -238,7 +231,7 @@ export default function MockPage() {
           height={1080}
           className="block w-full h-auto object-cover bp-min1170:absolute bp-min1170:inset-0 bp-min1170:size-full"
         />
-          <div className="px-[17px] md:px-20 py-16 md:py-24 bg-black bp-min1170:bg-transparent bp-min1170:relative">
+          <div className="px-[34px] md:px-20 py-16 md:py-24 bg-black bp-min1170:bg-transparent bp-min1170:relative">
             <motion.div
               className="flex flex-col md:flex-row items-start gap-8 md:gap-16"
               variants={sectionFade}
@@ -247,7 +240,7 @@ export default function MockPage() {
               viewport={{ once: true, amount: 0.3 }}
             >
               <motion.p
-                className="w-full text-[28px] md:text-[48px] leading-[1.25] text-white text-left max-w/[360px] md:max-w/[540px] bp-min1380:max-w/[647px] md:transform md:translate-y-1"
+                className="w-full text-[28px] md:text-[48px] leading-[1.25] text-white text-left max-w-[360px] md:max-w-[540px] bp-min1380:max-w-[647px] md:transform md:translate-y-1"
                 variants={lineVariant}
               >
                 Over the years, I’ve worked in so many different contexts and altitudes, I can now easily translate across them.
@@ -273,7 +266,7 @@ export default function MockPage() {
       </section>
 
       {/* CTA */}
-      <section id="contact" className="px-[17px] md:px-20 mt-20 md:mt-32">
+      <section id="contact" className="px-[34px] md:px-20 mt-20 md:mt-32">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start"
           variants={sectionFade}
@@ -282,7 +275,7 @@ export default function MockPage() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className="md:col-span-2 md:max-w-[640px]">
-            <motion.h3 className="text-[48px] md:text-5xl leading-[1.2] tracking-[0.48px] max-w-[360px] md:max-w-none" variants={lineVariant}>
+            <motion.h3 className="text-[28px] md:text-5xl leading-[1.2] tracking-[0.48px] max-w-[360px] md:max-w-none" variants={lineVariant}>
               Want to work<br className="hidden md:block" /> on something<br className="hidden md:block" /> together?
             </motion.h3>
             <motion.a
@@ -297,7 +290,7 @@ export default function MockPage() {
       </section>
 
       {/* Footer */}
-      <footer id="about" className="pl-[17px] md:pl-20 pr-[17px] md:pr-20 py-5 md:py-36 text-left text-[12px] text-neutral-400 uppercase tracking-[0.05em]">
+      <footer id="about" className="px-[34px] md:px-20 py-5 md:py-36 text-left text-[12px] text-neutral-400 uppercase tracking-[0.05em]">
         <motion.div variants={sectionFade} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
           © {new Date().getFullYear()} GRAHAM HILL. ALL RIGHTS RESERVED.
         </motion.div>
