@@ -63,16 +63,16 @@ function AnimatedBlock({
 
 export default function MockPage() {
   const experienceEntries = [
-    { year: '2025', detail: 'Independent, LA' },
-    { year: '2023', detail: 'Meta Reality Labs, LA' },
-    { year: '2019', detail: 'Messenger & IGD, SF' },
-    { year: '2016', detail: 'Independent, NYC' },
-    { year: '2015', detail: 'Oppermanweiss, NYC' },
-    { year: '2014', detail: 'Deeplocal, PGH' },
-    { year: '2007', detail: 'Independent, NYC' },
-    { year: '2005', detail: 'Prologue Films' },
-    { year: '2004', detail: 'SKDP, LA' },
-    { year: '2003', detail: 'Nike, PDX' },
+    { year: '2025', title: 'CREATIVE DIRECTOR', company: 'INDEPENDENT, LA' },
+    { year: '2023', title: 'DIRECTOR, PRODUCT CREATIVE', company: 'META REALITY LABS, LA' },
+    { year: '2019', title: 'DIRECTOR, PRODUCT CREATIVE', company: 'MESSENGER & IGD, SF' },
+    { year: '2016', title: 'CREATIVE DIRECTOR', company: 'INDEPENDENT, NYC' },
+    { year: '2015', title: 'CREATIVE DIRECTOR', company: 'OPPERMANWEISS, NYC' },
+    { year: '2014', title: 'CREATIVE DIRECTOR', company: 'DEEPLOCAL, PGH' },
+    { year: '2007', title: 'CREATIVE DIRECTOR', company: 'INDEPENDENT, NYC' },
+    { year: '2005', title: 'ART DIRECTOR', company: 'PROLOGUE FILMS' },
+    { year: '2004', title: 'DESIGNER', company: 'SKDP, LA' },
+    { year: '2003', title: 'DESIGNER', company: 'NIKE BRAND DESIGN, PDX' },
   ]
 
   return (
@@ -135,7 +135,7 @@ export default function MockPage() {
               animate="show"
             >
               <Image
-                src="/header.png"
+                src="/header2.png"
                 alt="Header visual"
                 width={1920}
                 height={1080}
@@ -165,7 +165,7 @@ export default function MockPage() {
           >
             <video
               src="/logo_sequence_06.mp4"
-              className="h-[354px] w-[270px] md:h-[480px] md:w-[330px] rounded-[24px] md:rounded-[40px] object-contain bg-black"
+              className="h-[250px] w-[270px] md:h-[250px] md:w-[330px] rounded-[24px] md:rounded-[40px] object-contain bg-black"
               autoPlay
               muted
               loop
@@ -192,30 +192,43 @@ export default function MockPage() {
           priority
         />
           <div className="px-[34px] md:px-20 lg:px-20 py-0 md:py-0 bg-black md:bg-transparent md:relative md:h-full">
-            <motion.h2
-              className="text-[28px] md:text-[48px] leading-tight max-w-[360px] md:max-w-[420px] mt-16 md:mt-0 md:absolute md:left-0 md:top-[210px] md:pl-[80px] text-left"
-              variants={lineVariant}
-            >
-              <span className="text-red-500 block sm:w-[320px] md:w-[320px]">My Experience,</span>
-              <span className="text-white block sm:w-[320px] md:w-[320px]">In Short.</span>
-            </motion.h2>
             <motion.div
-              className="w-full mt-[10px] md:mt-0 flex flex-col gap-4 text-[8px] leading-[1.4] tracking-[0.15em] uppercase text-neutral-100 md:text-[12px] md:leading-[1.6] md:w-[642px] md:max-w-[642px] md:ml-auto pt-16 md:pt-[210px] md:pb-24 md:pl-[360px]"
+              className="flex flex-col md:flex-row md:items-start gap-10 md:gap-16 md:h-full pt-16 md:pt-[210px] md:pb-24"
               variants={sectionFade}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.3 }}
             >
-              {experienceEntries.map(({ year, detail }) => (
-                <motion.div
-                  key={year}
-                  className="grid grid-cols-[25px_minmax(0,1fr)] md:grid-cols-[45px_minmax(0,1fr)] gap-x-[20px] md:gap-x-[36px] items-start"
+              <motion.div className="text-left max-w-[250px] md:max-w-[360px] md:pl-[0px]" variants={lineVariant}>
+                <motion.h2 className="text-[28px] md:text-[48px] leading-tight" variants={lineVariant}>
+                  <span className="text-red-500 block">My Experience,</span>
+                  <span className="text-white block">In Short.</span>
+                </motion.h2>
+                <motion.p
+                  className="mt-6 text-[12px] md:text-[16px] leading-[24px] md:leading-[32px] tracking-[0.05em] text-neutral-100 max-w-[320px]"
                   variants={lineVariant}
                 >
-                  <span className="text-right">{year}</span>
-                  <span className="whitespace-pre-line text-left">{detail}</span>
-                </motion.div>
-              ))}
+                  Built orgs, launched features, shipped campaigns, built experiences, defined vision and aligned executive stakeholders around them.
+                </motion.p>
+              </motion.div>
+              <motion.div
+                className="w-full md:max-w-[520px] mt-4 md:mt-0 md:ml-auto flex flex-col gap-5 text-[10px] md:text-[12px] leading-[16px] md:leading-[18px] text-neutral-100"
+                variants={lineVariant}
+              >
+                {experienceEntries.map(({ year, title, company }) => (
+                  <motion.div
+                    key={`${year}-${title}`}
+                    className="grid grid-cols-[32px_minmax(0,1fr)] md:grid-cols-[72px_minmax(0,1fr)] gap-x-[16px] md:gap-x-[24px] items-start"
+                    variants={lineVariant}
+                  >
+                    <span className="text-right font-medium text-neutral-200 uppercase tracking-[0.15em]">{year}</span>
+                    <div className="flex flex-col gap-[2px] uppercase tracking-[0.15em] leading-[16px] md:leading-[18px]">
+                      <span className="text-white">{title}</span>
+                      <span className="text-neutral-400">{company}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -243,22 +256,16 @@ export default function MockPage() {
                 className="w-full text-[28px] md:text-[48px] leading-[1.25] text-white text-left max-w-[360px] md:max-w-[540px] bp-min1380:max-w-[647px] md:transform md:translate-y-1"
                 variants={lineVariant}
               >
-                Over the years, I’ve worked in so many different contexts and altitudes, I can now easily translate across them.
+                My Approach.
               </motion.p>
               <motion.div
-                className="w-full text-white text-[12px] md:text-[18px] leading-[1.5] tracking-[0.05em] md:max-w-[400px] md:ml-auto mt-8 md:mt-0 max-w-[261px]"
+                className="w-full text-white text-[12px] md:text-[18px] leading-[1.5] tracking-[0.05em] md:max-w-[400px] md:ml-auto md:-translate-x-[20px] mt-8 md:mt-0 max-w-[261px]"
                 variants={lineVariant}
               >
-                <p>
-                  I’m a high-craft, conceptually-oriented, problem-motivated, user-centric creative director working at the intersection of product, creative, and brand.
-                </p>
-                <p className="mt-4">
-                  I’ve built orgs, launched features, shipped campaigns, defined vision and aligned executive stakeholders around them.
-                </p>
-                <p className="mt-4">
-                  But hey, if that just seemed like a handful of buzzwords crammed together into a couple sentences, try this instead: I lead creative teams in shipping new things that make people feel something and drive business impact at scale.
-                </p>
-                <p className="mt-4">Better?</p>
+                <p>High-craft, conceptually-oriented, problem-motivated, user-centric.</p>
+                <p className="mt-4">People, process, product — in that order.</p>
+                <p className="mt-4">Set vision, explain the why, point the way forward, clear the path, and execute.</p>
+                <p className="mt-4">Differentiation matters.</p>
               </motion.div>
             </motion.div>
           </div>
