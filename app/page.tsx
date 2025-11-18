@@ -285,7 +285,7 @@ export default function Page() {
               Want to work<br className="hidden md:block" /> on something<br className="hidden md:block" /> together?
             </motion.h3>
             <motion.a
-              href="mailto:hello@example.com"
+              href="mailto:graham@graham.fyi"
               className="mt-6 inline-block text-[28px] md:text-5xl leading-[1.2] tracking-[0.32px] text-red-500 hover:opacity-80"
               variants={lineVariant}
             >
