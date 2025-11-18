@@ -286,9 +286,11 @@ export default function MockPage() {
               Want to work<br className="hidden md:block" /> on something<br className="hidden md:block" /> together?
             </motion.h3>
             <motion.a
-              href="mailto:graham@graham.fyi"
-              className="mt-6 inline-block text-[28px] md:text-5xl leading-[1.2] tracking-[0.32px] text-red-500 hover:opacity-80"
+              href="mailto:hello@example.com"
+              className="mt-6 inline-block text-[28px] md:text-5xl leading-[1.2] tracking-[0.32px] text-red-500"
               variants={lineVariant}
+              whileHover={{ opacity: 0.8 }}
+              transition={{ duration: 0.2, ease: 'easeOut' }}
             >
               Let’s Chat.
             </motion.a>

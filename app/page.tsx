@@ -286,8 +286,10 @@ export default function Page() {
             </motion.h3>
             <motion.a
               href="mailto:graham@graham.fyi"
-              className="mt-6 inline-block text-[28px] md:text-5xl leading-[1.2] tracking-[0.32px] text-red-500 hover:opacity-80"
+              className="mt-6 inline-block text-[28px] md:text-5xl leading-[1.2] tracking-[0.32px] text-red-500"
               variants={lineVariant}
+              whileHover={{ opacity: 0.6 }}
+              transition={{ duration: 0.2, ease: 'easeOut' }}
             >
               Let’s Chat.
             </motion.a>
