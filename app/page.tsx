@@ -134,7 +134,7 @@ export default function Page() {
               animate="show"
             >
               <Image
-                src="/header2.png"
+                src="/header3.png"
                 alt="Header visual"
                 width={1920}
                 height={1080}
@@ -245,7 +245,7 @@ export default function Page() {
           />
           <div className="px-[34px] md:px-20 py-16 md:py-24 bg-black bp-min1170:bg-transparent bp-min1170:relative">
             <motion.div
-              className="flex flex-col md:flex-row items-start gap-8 md:gap-16"
+              className="flex flex-col md:flex-row items-start gap-0 md:gap-0"
               variants={sectionFade}
               initial="hidden"
               whileInView="show"
