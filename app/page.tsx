@@ -134,7 +134,7 @@ export default function Page() {
               animate="show"
             >
               <Image
-                src="/header3.png"
+                src="/header2.png"
                 alt="Header visual"
                 width={1920}
                 height={1080}
